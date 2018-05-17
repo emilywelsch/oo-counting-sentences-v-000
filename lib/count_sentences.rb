@@ -17,7 +17,7 @@ class String
   def count_sentences
     # self.split(/[.?!]/).count #=> this doesn't work with complex sentences with extra punctuation
     result = self.split(/[.?!]/)
-    result1 = result #remove empty values from array
-    result1.count
+    no_empty_values = result.reject { |c| c.empty? }
+    no_empty_values.count
   end
 end
